@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>骰子遊戲</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1>擲骰子</h1>
+      </header>
+
+      <section class="controls card">
+        <div class="control-group">
+          <label for="diceCount">骰子數量</label>
+          <select id="diceCount" aria-label="選擇骰子數量">
+            <option value="1">1 顆</option>
+            <option value="2">2 顆</option>
+            <option value="3">3 顆</option>
+            <option value="4">4 顆</option>
+            <option value="5">5 顆</option>
+            <option value="6">6 顆</option>
+            <option value="7">7 顆</option> 
+            <option value="8">8 顆</option> 
+            <option value="9">9 顆</option>
+            <option value="10">10 顆</option>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button id="rollButton" class="primary" type="button">擲骰</button>
+          <button id="randomColorsButton" class="tertiary" type="button">隨機顏色</button>
+          <button id="clearHistoryButton" class="secondary" type="button">清除紀錄</button>
+        </div>
+      </section>
+
+      <section class="settings card">
+        <h2>每顆骰子的顏色</h2>
+        <div id="diceSettings" class="dice-settings"></div>
+      </section>
+
+      <section class="dice-panel card">
+        <div id="diceContainer" class="dice-container" aria-live="polite"></div>
+      </section>
+
+      <section class="summary card">
+        <h2>本次結果</h2>
+        <p id="rollSummary">尚未擲骰</p>
+      </section>
+
+      <section class="history card">
+        <h2>擲骰紀錄</h2>
+        <ul id="historyList" class="history-list"></ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
